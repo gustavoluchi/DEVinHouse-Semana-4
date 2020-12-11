@@ -5,7 +5,7 @@ const Pessoas = [
 ];
 
 const nomeDasPessoasMenoresDeDezoito = (arrayDePessoas) => 
-    arrayDePessoas.filter((a, b, c) => { 
+    arrayDePessoas.filter((a) => { 
         if (a.idade < 18) {
             return a
         }
