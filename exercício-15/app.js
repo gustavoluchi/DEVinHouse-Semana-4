@@ -4,4 +4,4 @@ let resultado = cidadesJSON.filter((a, b, c) => {
     //console.log(a);
     return a.Estado === '23'});
 
-console.log(resultado)
+console.log(resultado);
