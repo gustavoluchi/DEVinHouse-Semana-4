@@ -19,16 +19,18 @@ const vai = funcaoPromiseSomar(10, 20)
 
 const vamo = async () => {
     try {
-        console.log(await funcaoPromiseSomar(35, 20));
+        return await funcaoPromiseSomar(30, 20);
     } catch (e) {
         console.log('catch do vamo acionado. O erro:', e);
     }
 }
-vamo()
 
-const segundoTeste = async () => {
+const loucura = (async function vamoQueVamo() { console.log(await vamo()); })();
+console.log(typeof loucura);
+
+function segundoTeste() {
     try {
-        return funcaoPromiseSomar(61, 20)
+        return funcaoPromiseSomar(61, 20);
     } catch (e) {
         console.log('catch do segundoTeste acionado. O erro:', e);
     }
